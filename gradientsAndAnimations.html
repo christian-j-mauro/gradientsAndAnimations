@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <body>
+    <div>
+      <br style = "line-height: 150pt;"/>
+<h1>Gradients and animations</h1>
+    </div>
+    </body>
+
+<style>
+h1 { /*Gives the text a white to black gradient*/
+  font-size: 50px;
+  background: -webkit-linear-gradient(left top, white , black); 
+            background: -o-linear-gradient(bottom right, white, black); 
+            background: -moz-linear-gradient(bottom right, white, black);
+            background: linear-gradient(to bottom right, white , black); 
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+div { /*Creates a circle for the animation and sets the timing*/
+    border-radius: 300px;
+    width: 600px;
+    height: 600px;
+    position: relative;
+    animation-name: animation;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+}
+@keyframes animation { /*This creates a looping animation where the colors of the circle change in each move.*/
+    0%   {background-color:fuchsia; left:100px;}
+    25%   {background-color:yellow; left:200px;}
+    50%   {background-color:cyan; left:100px;}
+    75%   {background-color:black; left:200px;}
+    100%   {background-color:fuchsia; left:100px;}
+
+}
+</style>
+</head>
+</html>
